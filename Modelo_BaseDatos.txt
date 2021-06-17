@@ -1,0 +1,8 @@
+MODELADO DE BASE DE DATOS
+GESTOR: MYSQL/PHP MY ADMIN
+Direccion: Localhost
+Usuario: root
+Password:
+
+----------------------------------------------------
+CREACION DE TABLAS
