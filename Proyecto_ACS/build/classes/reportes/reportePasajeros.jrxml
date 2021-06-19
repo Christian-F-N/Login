@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cb8ec914-fa17-4247-b37e-23d0be8809ac">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     pasajeros.`PAS_CEDULA` AS pasajeros_PAS_CEDULA,
+     pasajeros.`CUR_ID` AS pasajeros_CUR_ID,
+     pasajeros.`PAS_NOMBRE` AS pasajeros_PAS_NOMBRE,
+     pasajeros.`PAS_APELLIDO` AS pasajeros_PAS_APELLIDO,
+     pasajeros.`PAS_SALIDA` AS pasajeros_PAS_SALIDA,
+     pasajeros.`PAS_DESTINO` AS pasajeros_PAS_DESTINO,
+     pasajeros.`PAS_SEXO` AS pasajeros_PAS_SEXO
+FROM
+     `pasajeros` pasajeros]]>
+	</queryString>
+	<field name="pasajeros_PAS_CEDULA" class="java.lang.String"/>
+	<field name="pasajeros_CUR_ID" class="java.lang.Integer"/>
+	<field name="pasajeros_PAS_NOMBRE" class="java.lang.String"/>
+	<field name="pasajeros_PAS_APELLIDO" class="java.lang.String"/>
+	<field name="pasajeros_PAS_SALIDA" class="java.lang.String"/>
+	<field name="pasajeros_PAS_DESTINO" class="java.lang.String"/>
+	<field name="pasajeros_PAS_SEXO" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<rectangle>
+				<reportElement x="1" y="0" width="801" height="20" forecolor="#FF0000" backcolor="#FF0000" uuid="0e5645e2-e1a5-4b66-bab6-cede40178e8c"/>
+			</rectangle>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="2" width="47" height="20" uuid="2642ede1-607e-427f-9457-4b86bee6af9a"/>
+				<text><![CDATA[CEDULA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="2" width="54" height="20" uuid="a62589d5-84b7-43c4-ae3d-e3266c79b328"/>
+				<text><![CDATA[ASIENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="187" y="2" width="48" height="20" uuid="f73bc5d1-382f-452d-9d37-6dd6f093cac7"/>
+				<text><![CDATA[NOMBRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="2" width="60" height="20" uuid="58500cbd-ae3e-44a3-92c4-42700f7ffeb2"/>
+				<text><![CDATA[APELLIDO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="389" y="2" width="100" height="20" uuid="7e19c8c5-af26-4144-9b79-3cea033c3b55"/>
+				<text><![CDATA[SALIDA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="541" y="2" width="63" height="20" uuid="46fe8fac-929b-4274-a96c-cd7d886296df"/>
+				<text><![CDATA[DESTINO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="706" y="2" width="35" height="20" uuid="8a3bac65-2ff4-46c8-a9a6-2a24d114feff"/>
+				<text><![CDATA[SEXO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="69" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="17" width="47" height="20" uuid="df7c0c89-13fa-47de-89b2-c17ea94c5bf5"/>
+				<textFieldExpression><![CDATA[$F{pasajeros_PAS_CEDULA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="92" y="17" width="41" height="20" uuid="67eff23b-e6e7-422e-8b75-ef6be2587b61"/>
+				<textFieldExpression><![CDATA[$F{pasajeros_CUR_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="187" y="17" width="48" height="20" uuid="8b63a5d3-2857-4c51-a67d-d87565eefee9"/>
+				<textFieldExpression><![CDATA[$F{pasajeros_PAS_NOMBRE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="17" width="60" height="20" uuid="bc038f57-ffe4-4e81-9479-024ea9123fd4"/>
+				<textFieldExpression><![CDATA[$F{pasajeros_PAS_APELLIDO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="389" y="17" width="100" height="20" uuid="c920063f-d050-4ecf-ae07-100ef218e994"/>
+				<textFieldExpression><![CDATA[$F{pasajeros_PAS_SALIDA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="541" y="17" width="100" height="20" uuid="e2f92adb-b7a0-4851-a71d-5ac4e39c6437"/>
+				<textFieldExpression><![CDATA[$F{pasajeros_PAS_DESTINO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="681" y="17" width="100" height="20" uuid="41e33062-29d8-4bd1-8cf4-d63a4054c97f"/>
+				<textFieldExpression><![CDATA[$F{pasajeros_PAS_SEXO}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="54" width="802" height="1" uuid="19ca96bc-f42c-4d3f-95a2-bcd41e49ebc0"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="15" width="801" height="20" forecolor="#FF0000" backcolor="#FF0000" uuid="1dd00c0c-cb4b-48a9-8e27-811a422c8176"/>
+			</rectangle>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
